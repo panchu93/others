@@ -1,3 +1,9 @@
+'''
+This is the cli(command line interface) script that take a positive integer and
+which creates a square matrix of given size and returns the execution time 
+along with the matrix
+'''
+
 import sys
 import random
 import time
@@ -30,7 +36,9 @@ while True:
 		if count == tot_elements:
 			break
 
-string_output = "\n".join([ " ".join([str(output[i][j]) for j in range(n)]) for i in range(n)])
+string_output = "\n".join([ " ".join([str(output[i][j]) for j in range(n)]) \
+	for i in range(n)])
 execution_time = time.time() - start_time
-print("Execution Time: {0}\n The output matrix is as below:\n{1}".format(execution_time, string_output))
+print("Execution Time: {0}\n The output matrix is as below:\n{1}".format(
+	execution_time, string_output))
 exit(0)
